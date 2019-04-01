@@ -8,13 +8,13 @@ en sortie.
 Exemple d'entrée:
   [
     'Chicken',
-    'Bacon',
+    'Bacon',                                //strings
     'Tofu',
     'Mayonnaise'
   ]
 En sortie: [
   'Chicken contains 7 characters',
-  'Bacon contains 5 characters',
+  'Bacon contains 5 characters',            //eat
   'Tofu contains 4 characters',
   'Mayonnaise contains 10 characters'
 ]
@@ -22,6 +22,10 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
+  const eat = strings.map( function (eats){
+    return `${eats} contains ${eats.length} characters`;
+  });
+  return eat;
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

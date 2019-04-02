@@ -49,10 +49,20 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
     surface: "380.133"
   }
 ]
+
+N'oublie pas .toFixed(3) and Math.PI;
 */
 
 function getCirclesProperties(radiuses) {
-}
+  const pi = radiuses.map( function (math){
+    return({
+      'radius' : math,
+      'circumference' : (2 * Math.PI * math).toFixed(3),
+      'surface' : (Math.PI * math * math).toFixed(3)
+    })
+  });
+  return pi;
+};
 
 
 

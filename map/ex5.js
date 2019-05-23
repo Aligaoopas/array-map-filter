@@ -10,9 +10,21 @@ Exemple de tableau d'entrée:
   [3, 8, 11, 13, 19, 7]
 Tableau renvoyé par multiplyOddIndices:
   [3, 8, 11, 39, 19, 35]
+
+  Rémi Je pense utilisé indexOf() pour cette exercice
 */
 
 function multiplyOddIndices(numbers) {
+  const result = numbers.map((number, idx) => {
+    if (idx % 2 === 0) {
+      return number;
+    } else {
+      number = number * idx;
+      return number;
+    }
+  });
+  return result;
 }
+multiplyOddIndices([3, 8, 11, 13, 19, 7]);
 
 module.exports = multiplyOddIndices;
